@@ -22,6 +22,8 @@ public class Diezxciento {
 	}
 	
 	public int impuesto(){
+		if (sueldo > 1500000) 
+		    return (int) (diezxciento() * 0.1);  
 		return 0;
 	}
 	
