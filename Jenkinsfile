@@ -5,22 +5,23 @@ pipeline {
         stage('Build') {
             steps {
                 //sh "/usr/local/opt/maven/bin/mvn clean"
-                sh './mvnw clean compile -e'
+                sh './mvnw clean -e'
             }
         }
 
         stage('test') {
             steps {
                 //sh "/usr/local/opt/maven/bin/mvn compile"
-                sh './mvnw clean test -e'
+                sh './mvnw clean compile -e'
             }
         }
 
         stage('test2') {
             steps {
-                sh '''
+                /*h '''
                     /usr/local/opt/maven/bin/mvn test
-                '''
+                '''*/
+                sh './mvnw clean test -e'
             }
         }
     }
